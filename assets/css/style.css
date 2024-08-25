@@ -1,39 +1,82 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    text-align: center;
-    height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+  height: 100vh;
 }
 
 header {
-    padding: 10px 0;
-    text-align: center;
-    position: fixed;
-    width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .container {
-    text-align: center;
+  text-align: center;
 }
 
-button{
-    padding: 20px;
-    border-style: none;
-    font-size: larger;
-    border-radius: 8px;
-    background-color: #007bff;
-    color: white;
+button {
+  padding: 20px;
+  border-style: none;
+  font-size: larger;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
 }
 
-button:hover{
-    background-color: #0056b3;
+button:hover {
+  background-color: #0056b3;
+}
+
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  align-content: space-between;
+  justify-content: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  height: 300px;
+  width: 300px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: xx-large;
+}
+
+.hidden {
+  display: none;
 }
